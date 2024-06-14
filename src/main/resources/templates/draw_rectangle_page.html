@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Rectangle</title>
+    <style>
+        .rectangle{
+            position :relative;
+            top: 50px;
+            left:50px;
+            box-sizing:border-box;
+        }
+    </style>
+    
+</head>
+<body>
+    <a class = "bottom-link" th:href = "@{/}">Back to the Rectangle list</a>
+    <h1 th:text = " 'Rectangle: ' + ${rectangle.name}"></h1>
+    <p><strong>Width:</strong><span th:text = "${rectangle.width}"></span></p>
+    <p><strong>Height:</strong><span th:text = "${rectangle.height}"></span></p>
+    <p><strong>Color:</strong><span th:text = "${rectangle.color}"></span></p>
+    <p><strong>Border:</strong><span th:text = "${rectangle.border}"></span></p>
+<div class = "rectangle" th:style = " 'width:' + ${rectangle.width} + 'px; height:' + ${rectangle.height} + 'px; border: 1px solid ' + ${rectangle.border} + '; background-color:' + ${rectangle.color}">
+   
+    
+</div>
+        
+
+</body>
+</html>
